@@ -8,19 +8,28 @@
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
     <!-- --------------------- bootstrap css cdn link end --------------------- -->
     <!-- --------------------- custom css start --------------------- -->
+    <!-- --------------------- fontawesome css start --------------------- -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- --------------------- fontawesome css end --------------------- -->
     <link rel="stylesheet" href="css/style.css">
     <!-- --------------------- custom css end --------------------- -->
 </head>
 <body>
     <div class="container">
-        <div class="row">
+        <div class="row justify-content-center my-5">
             <div class="col-lg-5">
                 <!-- --------------------- main section start --------------------- -->
                     <div class="main">
-                        <h2>Favorite Color Picker</h2>
+                        <div class="head">
+                            <h2>Favorite Color Picker</h2>
+                            <button class="change_bgBtn">Pick Color</button>
+                        </div>
                         <div class="selected_color">
                             <p>Selected Color</p>
-                            <div class="color"></div>
+                            <div class="color_box"></div>
+                            <div class="check_color">
+                                <img class="display_color" src="images/color900.png" alt="check_color">
+                            </div>
                         </div>
                         <!-- --------------------- main_hexAndRgb_input section start --------------------- -->
                         <div class="main_hexAndRgb_input">
@@ -28,10 +37,12 @@
                                 <div class="main_hex">
                                     <label for="hex">HEX</label>
                                     <input class="hex_input" placeholder="#ffffff" type="text" id="hex" name="hex">
+                                    <span class="copy_hex"><i class="fa-solid fa-clone"></i></span>
                                 </div>
                                 <div class="main_rgb">
                                     <label for="rgb">RGB</label>
                                     <input class="rgb_input" placeholder="rgb(71,143,186)" type="text" id="rgb" name="rgb">
+                                     <span class="copy_rgb"><i class="fa-solid fa-clone"></i></span>
                                 </div>
                             </form>
                         </div>
@@ -39,16 +50,16 @@
                         <!-- --------------------- range section start --------------------- -->
                         <div class="range_main">
                             <div class="range_red common_label">
-                                <label for="red">Red(23)</label>
-                                <input type="range" name="red" id="red">
+                                <label class="red_label" for="red">Red(23)</label>
+                                <input class="red_input" type="range" name="red" id="red">
                             </div>
                             <div class="range_green common_label">
-                                <label for="green">Green(222)</label>
-                                <input type="range" name="green" id="green">
+                                <label class="green" for="green">Green(222)</label>
+                                <input class="green_input" type="range" name="green" id="green">
                             </div>
                             <div class="range_blue common_label">
-                                <label for="blue">Blue(111)</label>
-                                <input type="range" name="blue" id="blue">
+                                <label class="blue_label" for="blue">Blue(111)</label>
+                                <input class="blue_input" type="range" name="blue" id="blue">
                             </div>
                         </div>
                         <!-- --------------------- range section end --------------------- -->
