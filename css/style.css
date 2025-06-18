@@ -129,6 +129,10 @@ img{
     transform: translateX(-50%);
     cursor: pointer;
 }
+.check_icon{
+    display: none;
+    color: green;
+}
 .main_rgb{
    display: flex;
    flex-direction: column; 

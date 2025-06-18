@@ -5,15 +5,29 @@ const main=()=>{
 
 
 
-
+// event all function start ----------
 const change_bgBtn = document.querySelector('.change_bgBtn')
+const hex_copy = document.querySelector('.copy_hex')
 /**
  * this function will change the display background color
  */
 change_bgBtn.addEventListener('click',()=>{
+    document.querySelector('.check_icon').style = `display:none`
+    document.querySelector('.copy_hex').style = `display : block`
     let color = twoColorGenerator()
     update_dom(color)
 })
+hex_copy.addEventListener('click',()=>{
+     let hex = document.querySelector('.hex_input')
+     let check_icon = document.querySelector('.check_icon')
+    window.navigator.clipboard.writeText(hex.value)
+    check_icon.style = `display:block`
+    document.querySelector('.copy_hex').style = `display : none`
+})
+
+
+
+// event all function end ----------
 /**
  * this function will upte the dom 
  * @param {string} color 
@@ -23,7 +37,6 @@ change_bgBtn.addEventListener('click',()=>{
 const update_dom=(color)=>{
     let rgb = rgbGenerator(color)
     const hex = hexGenerator(color)
-    console.log(hex);
     
     document.querySelector('.display_color').style = `background:${rgb}`
     document.querySelector('.color_box').style = `background:${rgb}`
