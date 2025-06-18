@@ -1,0 +1,163 @@
+/* ---------------- google font link start ---------------- */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+/* ---------------- google font link end ---------------- */
+/* ---------------- custom css start ---------------- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0px;
+    padding: 0px;
+}
+a{
+    display: inline-block;
+}
+img{
+    min-width: 100%;
+    vertical-align: middle;
+}
+/* ---------------- custom css end ---------------- */
+/* ---------------- common css start ---------------- */
+:root{
+    --my-font:"Oswald", sans-serif;
+    --primary-color:#ffffff;
+}
+.common_label label{
+    font-family: var(--my-font);
+    color: #333;
+    font-size: 14px;
+}
+/* ---------------- common css end ---------------- */
+/* ---------------- main css start ---------------- */
+.main{
+    padding: 18px;
+    border: 1px solid rebeccapurple;
+    border-radius: 4px;
+}
+.main h2{
+    font-family: var(--my-font);
+    font-size: 18px;
+    border-bottom: 1px solid #171717;
+    padding-bottom: 5px;
+}
+/* ---------------- main css end ---------------- */
+/* ---------------- selected_color css start ---------------- */
+.selected_color{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+.selected_color p{
+    font-family: var(--my-font);
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+}
+.color{
+    padding: 15px 35px 15px 35px;
+    background: #ddd;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* ---------------- selected_color css end ---------------- */
+/* ---------------- main_hexAndRgb_input css start ---------------- */
+.main_hexAndRgb_input{
+    margin-top: 20px;
+}
+.main_form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main_hex{
+    display: flex;
+    flex-direction: column;
+}
+.main_hex label{
+    font-family: var(--my-font);
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 3px;
+}
+.main_hex input{
+    outline: none;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+    padding: 3px 8px 3px 8px;
+}
+.main_rgb{
+   display: flex;
+   flex-direction: column; 
+}
+.main_rgb label{
+    font-family: var(--my-font);
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 3px;
+}
+.main_rgb input{
+    outline: none;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+    padding: 3px 8px 3px 8px;
+}
+/* ---------------- main_hexAndRgb_input css end ---------------- */
+/* ---------------- custom css start ---------------- */
+.range_main{
+    padding-top: 25px;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 35px;
+    border-top: 1px solid #ddd;
+}
+/* ---------------- custom css end ---------------- */
+/* ---------------- main_preset css start ---------------- */
+.main_preset{
+    padding-top: 25px;
+    margin-top: 25px;
+    border-top: 1px solid #ddd;
+}
+.main_preset h3{
+    font-family: var(--my-font);
+    color: #333;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+.main_preset .preset_color{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+.preset_color .srcl_one{
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    background: #000;
+}
+.preset_color .srcl_Two{
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    background: rebeccapurple;
+}
+/* ---------------- main_preset css end ---------------- */
+/* ---------------- custom css start ---------------- */
+
+
+/* ---------------- custom css end ---------------- */
+/* ---------------- custom css start ---------------- */
+
+
+/* ---------------- custom css end ---------------- */
