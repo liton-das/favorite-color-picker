@@ -215,6 +215,20 @@ img{
     border-radius: 50%;
     background: rebeccapurple;
 }
+.preset_color .srcl_three{
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    background: rgb(0, 255, 64);
+}
+.preset_color .srcl_four{
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    background: rgb(255, 0, 174);
+}
 /* ---------------- main_preset css end ---------------- */
 /* ---------------- custom css start ---------------- */
 
