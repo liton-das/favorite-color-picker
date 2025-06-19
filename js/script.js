@@ -84,12 +84,13 @@ green_input.addEventListener('change',()=>{
 const update_dom=(color)=>{
     let rgb = rgbGenerator(color)
     const hex = hexGenerator(color)
-    
     document.querySelector('.display_color').style = `background:${rgb}`
     document.querySelector('.color_box').style = `background:${rgb}`
     document.querySelector('.rgb_input').value = `${rgb}`
     document.querySelector('.hex_input').value = `${hex}`
-
+    document.querySelector('.red_label').innerHTML = `Red : ${red_input.value}`
+    document.querySelector('.green_label').innerHTML = `Green : ${green_input.value}`
+    document.querySelector('.blue_label').innerHTML = `Blue : ${blue_input.value}`
 }
 /**
  * this function will return color object 
@@ -112,9 +113,6 @@ const hexGenerator=({red,green,blue})=>{
     }
     return `#${rgbTohexConvert(red)}${rgbTohexConvert(green)}${rgbTohexConvert(blue)}`
 }
-
-
-
 /**
  * this function will generate rgb color 
  * @param {string}
