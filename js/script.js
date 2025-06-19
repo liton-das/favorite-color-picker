@@ -42,14 +42,45 @@ copy_rgb.addEventListener('click',()=>{
     check_icon.style = `display:none`
     copy_hex.style = `display : block`
 })
-
+let red_input = document.querySelector('.red_input')
+let blue_input = document.querySelector('.blue_input')
+let green_input = document.querySelector('.green_input')
+/**
+ * this function will generate multiple color
+ */
+const generateMultipleColor=()=>{
+   let color={
+        red:parseInt(red_input.value),
+        blue:parseInt(blue_input.value),
+        green:parseInt(green_input.value)
+    }
+    return color
+}
+/**
+ * this envet will change input range value when user change range button start
+ */
+red_input.addEventListener('change',()=>{
+    let color=generateMultipleColor()
+    update_dom(color)
+})
+blue_input.addEventListener('change',()=>{
+    let color=generateMultipleColor()
+    update_dom(color)
+})
+green_input.addEventListener('change',()=>{
+    let color=generateMultipleColor()
+    update_dom(color)
+})
+/**
+ * this envet will change input range value when user change range button start
+ */
 // event all function end ----------
+
 /**
  * this function will upte the dom 
  * @param {string} color 
  * @returns {string}
  */
-
 const update_dom=(color)=>{
     let rgb = rgbGenerator(color)
     const hex = hexGenerator(color)
