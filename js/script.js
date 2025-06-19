@@ -1,3 +1,9 @@
+/** default color  */
+let defautl_color={
+red:93,
+green:0,
+blue:92
+}
 window.onload=()=>{
     main()
 }
@@ -20,6 +26,7 @@ change_bgBtn.addEventListener('click',()=>{
     check_iconTwo.style = `display:none`
     copy_rgb.style = `display : block`
     let color = twoColorGenerator()
+    // let color = generateMultipleColor()
     update_dom(color)
 })
      /**
@@ -45,14 +52,12 @@ copy_rgb.addEventListener('click',()=>{
 let red_input = document.querySelector('.red_input')
 let blue_input = document.querySelector('.blue_input')
 let green_input = document.querySelector('.green_input')
-/**
- * this function will generate multiple color
- */
-const generateMultipleColor=()=>{
-   let color={
-        red:parseInt(red_input.value),
-        blue:parseInt(blue_input.value),
-        green:parseInt(green_input.value)
+// this function create a intiger number only this will get input range value
+const getRangeValue=()=>{
+    let color={
+        red:parseInt(red.value),
+        green:parseInt(green.value),
+        blue:parseInt(blue.value)
     }
     return color
 }
@@ -60,15 +65,16 @@ const generateMultipleColor=()=>{
  * this envet will change input range value when user change range button start
  */
 red_input.addEventListener('change',()=>{
-    let color=generateMultipleColor()
+    // let color = twoColorGenerator()
+    let color=getRangeValue()
     update_dom(color)
 })
 blue_input.addEventListener('change',()=>{
-    let color=generateMultipleColor()
+    let color=getRangeValue()
     update_dom(color)
 })
 green_input.addEventListener('change',()=>{
-    let color=generateMultipleColor()
+    let color=getRangeValue()
     update_dom(color)
 })
 /**
@@ -88,9 +94,12 @@ const update_dom=(color)=>{
     document.querySelector('.color_box').style = `background:${rgb}`
     document.querySelector('.rgb_input').value = `${rgb}`
     document.querySelector('.hex_input').value = `${hex}`
-    document.querySelector('.red_label').innerHTML = `Red : ${red_input.value}`
-    document.querySelector('.green_label').innerHTML = `Green : ${green_input.value}`
-    document.querySelector('.blue_label').innerHTML = `Blue : ${blue_input.value}`
+    document.querySelector('.red_label').innerHTML = `Red : ${color.red}`
+    document.querySelector('.green_label').innerHTML = `Green : ${color.green}`
+    document.querySelector('.blue_label').innerHTML = `Blue : ${color.blue}`
+    document.querySelector('.red_input').value = color.red
+    document.querySelector('.green_input').value = color.green
+    document.querySelector('.blue_input').value = color.blue
 }
 /**
  * this function will return color object 

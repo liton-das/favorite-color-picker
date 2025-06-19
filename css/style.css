@@ -169,6 +169,10 @@ img{
     border: 1px solid #ddd;
     padding: 3px 8px 3px 8px;
 }
+.main_rgb .rgb_input::placeholder{
+    color: #ffffff;
+    z-index: -1;
+}
 /* ---------------- main_hexAndRgb_input css end ---------------- */
 /* ---------------- custom css start ---------------- */
 .range_main{
