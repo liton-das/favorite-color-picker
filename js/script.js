@@ -1,11 +1,6 @@
-/** default color  */
-let defautl_color={
-red:93,
-green:0,
-blue:92
-}
+
 window.onload=()=>{
-    main()
+    main();
 }
 const main=()=>{
 // event all function start ----------
@@ -20,6 +15,7 @@ const hex_copy = document.querySelector('.copy_hex')
      let copy_hex = document.querySelector('.copy_hex')
      let copy_rgb = document.querySelector('.copy_rgb')
      let check_iconTwo = document.querySelector('.check_iconTwo')
+     rgb_input.classList.add('rgb_input_design')
 change_bgBtn.addEventListener('click',()=>{
     check_icon.style = `display:none`
     copy_hex.style = `display : block`
@@ -87,6 +83,7 @@ green_input.addEventListener('change',()=>{
  * @param {string} color 
  * @returns {string}
  */
+
 const update_dom=(color)=>{
     let rgb = rgbGenerator(color)
     const hex = hexGenerator(color)
@@ -101,6 +98,7 @@ const update_dom=(color)=>{
     document.querySelector('.green_input').value = color.green
     document.querySelector('.blue_input').value = color.blue
 }
+
 /**
  * this function will return color object 
  * @returns {object}
@@ -130,4 +128,13 @@ const hexGenerator=({red,green,blue})=>{
     const rgbGenerator=({red,green,blue})=>{
         return `rgb(${red},${green},${blue})`
     }
+
+    /** default color start */
+let defautl_color={
+    red:255,
+    green:255,
+    blue:255
+    }
+    update_dom(defautl_color)
+    /** default color end */
 }
