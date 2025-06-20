@@ -31,23 +31,34 @@ const main=()=>{
    */
   hex_copy.addEventListener("click", () => {
     soundEffect('sound/button-click-289742.mp3')
-    window.navigator.clipboard.writeText(hex.value);
-    check_icon.style = `display:block`;
-    copy_hex.style = `display : none`;
-    copy_rgb.style = "display: block";
-    check_iconTwo.style = "display:none";
-  });
+    if(hex.value !== ''){
+      window.navigator.clipboard.writeText(hex.value);
+      check_icon.style = `display:block`;
+      copy_hex.style = `display : none`;
+      copy_rgb.style = "display: block";
+      check_iconTwo.style = "display:none";
 
+      successMessage(hex_input.value)
+    }else{
+      errorMessage()
+    }
+    
+  });
   /**
    * this function will copy rgb color only
    */
   copy_rgb.addEventListener("click", () => {
     soundEffect('sound/button-click-289742.mp3')
-    window.navigator.clipboard.writeText(rgb_input.value);
-    copy_rgb.style = "display: none";
-    check_iconTwo.style = "display:block";
-    check_icon.style = `display:none`;
-    copy_hex.style = `display : block`;
+    if(red_input.value !== ''){
+      window.navigator.clipboard.writeText(rgb_input.value);
+      copy_rgb.style = "display: none";
+      check_iconTwo.style = "display:block";
+      check_icon.style = `display:none`;
+      copy_hex.style = `display : block`;
+      successMessage(rgb_input.value)
+    }else{
+      errorMessage()
+    }
   });
   let red_input = document.querySelector(".red_input");
   let blue_input = document.querySelector(".blue_input");
@@ -167,11 +178,13 @@ const main=()=>{
   generatePresetBox(preset_perant, colors);
 
 preset_perant.addEventListener('click',(e)=>{
-    soundEffect('sound/button-click-289742.mp3')
-    const value = e.target
-    if(value.classList=='srcl_box'){
+  const value = e.target
+  if(value.classList=='srcl_box'){
+      soundEffect('sound/button-click-289742.mp3')
         const color = value.getAttribute('data-set')
         window.navigator.clipboard.writeText(color)
+        successMessage(color)
+        return 
     }
     
 })
@@ -244,6 +257,27 @@ const soundEffect = (audio) =>{
     sound.play()
     // return audio
 }
+/**
+ * toast message 
+ */
+const successMessage = (msg) => {
+  new Notify({
+    status: "success",
+    title: `copied : ${msg}`,
+    effect: "fade",
+    speed: 300,
+  });
+};
+const errorMessage = () => {
+  new Notify({
+    status: "error",
+    title: "Not copied",
+    effect: "fade",
+    speed: 300,
+  });
+};
+
+
 
   /** default color start */
   let defautl_color = {
