@@ -35,6 +35,8 @@ hex_copy.addEventListener('click',()=>{
     copy_rgb.style = 'display: block'
     check_iconTwo.style = 'display:none'
 })
+
+
 /**
  * this function will copy rgb color only
  */
@@ -73,6 +75,29 @@ green_input.addEventListener('change',()=>{
     let color=getRangeValue()
     update_dom(color)
 })
+
+/**
+ * get hex value from user and set dom 
+ */
+let hex_input = document.querySelector('.hex_input')
+hex_input.addEventListener('keyup',(e)=>{
+    let color = e.target.value
+    if(color && isValid(color)){
+        let rgb = hexToRgb(color)
+       rgb_input.value=`rgb${rgb}`
+       document.querySelector('.display_color').style = `background:${rgb}`
+        document.querySelector('.color_box').style = `background:${rgb}`
+       
+    }
+})
+const hexToRgb = (color) =>{
+    color=color.replace('#','')
+    if(color.length !== 6)return null
+    let r = parseInt(color.slice(0,2),16)
+    let g = parseInt(color.slice(2,4),16)
+    let b = parseInt(color.slice(4,6),16)
+    return `rgb(${r},${g},${b})`
+}
 /**
  * this envet will change input range value when user change range button start
  */
@@ -90,7 +115,7 @@ const update_dom=(color)=>{
     document.querySelector('.display_color').style = `background:${rgb}`
     document.querySelector('.color_box').style = `background:${rgb}`
     document.querySelector('.rgb_input').value = `${rgb}`
-    document.querySelector('.hex_input').value = `${hex}`
+    document.querySelector('.hex_input').value = `#${hex}`
     document.querySelector('.red_label').innerHTML = `Red : ${color.red}`
     document.querySelector('.green_label').innerHTML = `Green : ${color.green}`
     document.querySelector('.blue_label').innerHTML = `Blue : ${color.blue}`
@@ -115,10 +140,10 @@ const twoColorGenerator = () => {
 };
 const hexGenerator=({red,green,blue})=>{
     const rgbTohexConvert=(value)=>{
-        const hex = value.toString(16).replace(/|s+/g,'')
-        return hex.length===1?`0${hex}`:hex
+        const hex = value.toString(16).replace(/\s+/g,'')
+        return hex.length=== 1 ?`0${hex}`:hex
     }
-    return `#${rgbTohexConvert(red)}${rgbTohexConvert(green)}${rgbTohexConvert(blue)}`
+    return `${rgbTohexConvert(red)}${rgbTohexConvert(green)}${rgbTohexConvert(blue)}`
 }
 /**
  * this function will generate rgb color 
@@ -128,6 +153,13 @@ const hexGenerator=({red,green,blue})=>{
     const rgbGenerator=({red,green,blue})=>{
         return `rgb(${red},${green},${blue})`
     }
+//---------- check validation 
+const isValid=(color)=>{
+    if(color.length !== 7)return false
+    if(color[0] !== '#') return false
+    color = color.substring(1)
+    return /^[0-9A-Fa-f]{6}$/i.test(color)
+}
 
     /** default color start */
 let defautl_color={
