@@ -63,7 +63,7 @@ const getRangeValue=()=>{
  * this envet will change input range value when user change range button start
  */
 red_input.addEventListener('change',()=>{
-    // let color = twoColorGenerator()
+    
     let color=getRangeValue()
     update_dom(color)
 })
@@ -98,9 +98,56 @@ const hexToRgb = (color) =>{
     let b = parseInt(color.slice(4,6),16)
     return `rgb(${r},${g},${b})`
 }
+let colors = [
+    '#5c2011',
+    '#3d1702',
+    '#0b5e55',
+    '#00face',
+    '#c0ffee',
+    '#691094',
+    '#4a7864',
+    '#fb8b1e',
+    '#cfbc5a',
+    '#d6184f',
+    '#78196c',
+    '#fbe4d5',
+    '#a55736',
+    '#691094',
+    '#a55736',
+    '#fbe4d5',
+    '#fbe4d5',
+    '#d6184f',
+    '#fb8b1e',
+    '#cfbc5a'
+]
+
+  
 /**
- * this envet will change input range value when user change range button start
+ * this function will generate a div with style background-color
+ * @param {object} color 
+ * @returns {object}
  */
+    const generateDiv = (color) =>{
+        let div = document.createElement('div')
+        div.classList.add('srcl_box')
+        div.style = `background:${color}`
+        div.setAttribute('data-set',color)
+        return div
+    }
+    /**
+     * this function will generate multiple color boxes
+     * @param {perant} perant 
+     * @param {color} color 
+     */
+const generatePresetBox = (perant,color) =>{
+    color.forEach((color)=>{
+        perant.appendChild(generateDiv(color))
+    })
+}
+/**
+ * here call this function with pass the two argument first argument for a parent div and second argument for the color  
+ */
+generatePresetBox(document.querySelector('.preset_color'),colors)
 // event all function end ----------
 
 /**

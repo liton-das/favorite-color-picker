@@ -206,14 +206,14 @@ img{
     gap: 12px;
     flex-wrap: wrap;
 }
-.preset_color .srcl_one{
+.preset_color .srcl_box{
     width: 30px;
     height: 30px;
     border: 1px solid #ddd;
     border-radius: 50%;
     background: #000;
 }
-.preset_color .srcl_Two{
+/* .preset_color .srcl_Two{
     width: 30px;
     height: 30px;
     border: 1px solid #ddd;
@@ -233,7 +233,7 @@ img{
     border: 1px solid #ddd;
     border-radius: 50%;
     background: rgb(255, 0, 174);
-}
+} */
 /* ---------------- main_preset css end ---------------- */
 /* ---------------- custom css start ---------------- */
 
