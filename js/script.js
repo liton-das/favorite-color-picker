@@ -187,6 +187,8 @@ preset_perant.addEventListener('click',(e)=>{
       soundEffect('sound/button-click-289742.mp3')
         const color = value.getAttribute('data-set')
         window.navigator.clipboard.writeText(color)
+        document.querySelector(".display_color").style = `background:${color}`;
+    document.querySelector(".color_box").style = `background:${color}`;
         successMessage(color)
         return 
     }
