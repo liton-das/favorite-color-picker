@@ -96,6 +96,9 @@ const main=()=>{
    */
   let hex_input = document.querySelector(".hex_input");
   hex_input.addEventListener("keyup", (e) => {
+      rgb_input.value = ''
+      check_icon.style = `display:none`;
+      copy_hex.style = `display : block`;
     soundEffect('sound/button-click-289742.mp3')
     let color = e.target.value;
     if (color && isValid(color)) {
@@ -103,6 +106,7 @@ const main=()=>{
       rgb_input.value = `rgb${rgb}`;
       document.querySelector(".display_color").style = `background:${rgb}`;
       document.querySelector(".color_box").style = `background:${rgb}`;
+      
     }
   });
   const hexToRgb = (color) => {
@@ -271,7 +275,7 @@ const successMessage = (msg) => {
 const errorMessage = () => {
   new Notify({
     status: "error",
-    title: "Not copied",
+    title: "input field is empty",
     effect: "fade",
     speed: 300,
   });
