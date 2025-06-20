@@ -212,27 +212,21 @@ img{
     border: 1px solid #ddd;
     border-radius: 50%;
     background: #000;
+    cursor: pointer;
 }
-/* .preset_color .srcl_Two{
-    width: 30px;
-    height: 30px;
-    border: 1px solid #ddd;
-    border-radius: 50%;
-    background: rebeccapurple;
+/* .srcl_box .clone{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+    color: #ffffff;
+    padding: 4px;
+    opacity: 0;
+
 }
-.preset_color .srcl_three{
-    width: 30px;
-    height: 30px;
-    border: 1px solid #ddd;
-    border-radius: 50%;
-    background: rgb(0, 255, 64);
-}
-.preset_color .srcl_four{
-    width: 30px;
-    height: 30px;
-    border: 1px solid #ddd;
-    border-radius: 50%;
-    background: rgb(255, 0, 174);
+.srcl_box .clone:hover{
+    opacity: 1;
+    color: green;    
 } */
 /* ---------------- main_preset css end ---------------- */
 /* ---------------- custom css start ---------------- */
