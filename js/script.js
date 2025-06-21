@@ -26,6 +26,18 @@ const main=()=>{
     // let color = generateMultipleColor()
     update_dom(color);
   });
+
+
+  //----- reset button 
+  const resetBtn = document.querySelector('.reset')
+  resetBtn.addEventListener('click',()=>{
+    window.location.reload() 
+    resetBtn.classList.add('reset_icon')
+  })
+
+
+
+
   /**
    * this function work will copy hex color
    */

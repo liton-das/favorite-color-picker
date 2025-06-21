@@ -48,7 +48,8 @@ img{
 }
 .main .head{
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
+    align-items: center;
 }
 .head .change_bgBtn{
     outline: none;
@@ -62,7 +63,27 @@ img{
     background: #ffffff;
     transition: all 1s;
 }
+.reset{
+   outline: none;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    font-family: var(--my-font);
+    font-size: 16px;
+    color: #ffffff;
+    background: rgb(243, 83, 83);
+    transition: all 1s; 
+    margin-left: 8px;
+    position: relative;
+    
+}
 .head .change_bgBtn:hover{
+    background: #203a43;
+    color: #ffffff;
+}
+.reset:hover{
     background: #203a43;
     color: #ffffff;
 }
@@ -71,6 +92,17 @@ img{
 }
 .check_color img{
     width: 100%;
+}
+.reset_icon{
+    animation: rotate 0.3s linear;
+}
+/* .reset:hover {
+  animation: rotate 8s linear infinite;
+} */
+
+@keyframes rotate{
+    0% {rotate: 0deg;}
+  100% {rotate: 360deg;}
 }
 /* ---------------- main css end ---------------- */
 /* ---------------- selected_color css start ---------------- */
