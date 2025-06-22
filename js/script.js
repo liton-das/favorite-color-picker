@@ -3,7 +3,7 @@ window.onload=()=>{
     main();
 }
 const main=()=>{
-  // event all function start ----------
+  // ---------- event all function start -------------------------//
   const change_bgBtn = document.querySelector(".change_bgBtn");
   const hex_copy = document.querySelector(".copy_hex");
   /**
@@ -26,18 +26,12 @@ const main=()=>{
     // let color = generateMultipleColor()
     update_dom(color);
   });
-
-
   //----- reset button 
   const resetBtn = document.querySelector('.reset')
   resetBtn.addEventListener('click',()=>{
     window.location.reload() 
     resetBtn.classList.add('reset_icon')
   })
-
-
-
-
   /**
    * this function work will copy hex color
    */
@@ -85,7 +79,7 @@ const main=()=>{
     return color;
   };
   /**
-   * this envet will change input range value when user change range button start
+   * this envet will change input range value when user change range button
    */
   red_input.addEventListener("change", () => {
     soundEffect('sound/button-click-289742.mp3')
@@ -121,6 +115,11 @@ const main=()=>{
       
     }
   });
+  /**
+   * hex to rgb converter function 
+   * @param {object} color 
+   * @returns {object}
+   */
   const hexToRgb = (color) => {
     color = color.replace("#", "");
     if (color.length !== 6) return null;
@@ -192,7 +191,9 @@ const main=()=>{
    */
   const preset_perant = document.querySelector('.preset_color')
   generatePresetBox(preset_perant, colors);
-
+/**
+ * ------------------- this function will work for copy preset color -------------------------//
+ */
 preset_perant.addEventListener('click',(e)=>{
   const value = e.target
   if(value.classList=='srcl_box'){
@@ -206,15 +207,12 @@ preset_perant.addEventListener('click',(e)=>{
     }
     
 })
-
-  // event all function end ----------
-
+  // ---------- event all function end -------------------------//
   /**
    * this function will upte the dom
    * @param {string} color
    * @returns {string}
    */
-
   const update_dom = (color) => {
     let rgb = rgbGenerator(color);
     const hex = hexGenerator(color);
@@ -229,7 +227,6 @@ preset_perant.addEventListener('click',(e)=>{
     document.querySelector(".green_input").value = color.green;
     document.querySelector(".blue_input").value = color.blue;
   };
-
   /**
    * this function will return color object
    * @returns {object}
@@ -294,9 +291,6 @@ const errorMessage = () => {
     speed: 300,
   });
 };
-
-
-
   /** default color start */
   let defautl_color = {
     red: 255,

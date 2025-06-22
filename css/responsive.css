@@ -1,0 +1,99 @@
+/* ------------------------------ extra small dive responsive start ------------------------------ */
+@media(max-width:575.98px){
+    /* ------------------------------ header section responsive start ------------------------------ */
+    .main .head {
+        flex-wrap: wrap;
+    }
+    .responsive {
+        margin-top: 26px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+    }
+    .range_main {
+        flex-wrap: wrap !important;
+    }
+    /* ------------------------------ header section responsive end ------------------------------ */
+    /* ------------------------------ display color section responsive start ------------------------------ */
+    
+    .selected_color {
+        flex-wrap: wrap;
+    }
+    .check_color {
+        width: 100%;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        overflow: hidden;
+    }
+    
+    /* ------------------------------ display color section responsive end ------------------------------ */
+    /* ------------------------------ main_form color section responsive start ------------------------------ */
+    .main_form {
+        flex-wrap: wrap;
+    }
+    
+    /* ------------------------------ main_form color section responsive end ------------------------------ */
+    /* ------------------------------ main_hex color responsive start ------------------------------ */
+    
+    .main_hex {
+        width: 100%;
+}
+/* ------------------------------ main_hex color responsive end ------------------------------ */
+/* ------------------------------ mainl_rgb color responsive start ------------------------------ */
+.main_rgb {
+    width: 100%;
+        margin-top: 20px;
+    }
+    /* ------------------------------ mainl_rgb color responsive end ------------------------------ */
+}
+/* ------------------------------ extra small dive responsive end ------------------------------ */
+/* ------------------------------ small dive responsive start ------------------------------ */
+@media(min-width:576px) and (max-width:767.98px){
+      /* ------------------------------ header section responsive start ------------------------------ */
+    .main .head {
+        flex-wrap: wrap;
+    }
+    .responsive {
+        margin-top: 26px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+    }
+    .range_main {
+        flex-wrap: wrap !important;
+    }
+    /* ------------------------------ header section responsive end ------------------------------ */
+    /* ------------------------------ display color section responsive start ------------------------------ */
+    
+    .selected_color {
+        flex-wrap: wrap;
+    }
+    .check_color {
+        width: 100%;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        overflow: hidden;
+    }
+    
+    /* ------------------------------ display color section responsive end ------------------------------ */
+    /* ------------------------------ main_form color section responsive start ------------------------------ */
+    .main_form {
+        flex-wrap: wrap;
+    }
+    
+    /* ------------------------------ main_form color section responsive end ------------------------------ */
+    /* ------------------------------ main_hex color responsive start ------------------------------ */
+    
+    .main_hex {
+        width: 100%;
+}
+/* ------------------------------ main_hex color responsive end ------------------------------ */
+/* ------------------------------ mainl_rgb color responsive start ------------------------------ */
+.main_rgb {
+    width: 100%;
+        margin-top: 20px;
+    }  
+}
+/* ------------------------------ small dive responsive end ------------------------------ */

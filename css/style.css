@@ -124,7 +124,6 @@ img{
     border: 1px solid #ddd;
     border-radius: 4px;
 }
-
 /* ---------------- selected_color css end ---------------- */
 /* ---------------- main_hexAndRgb_input css start ---------------- */
 .main_hexAndRgb_input{
@@ -246,26 +245,4 @@ img{
     background: #000;
     cursor: pointer;
 }
-/* .srcl_box .clone{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.3s;
-    color: #ffffff;
-    padding: 4px;
-    opacity: 0;
-
-}
-.srcl_box .clone:hover{
-    opacity: 1;
-    color: green;    
-} */
 /* ---------------- main_preset css end ---------------- */
-/* ---------------- custom css start ---------------- */
-
-
-/* ---------------- custom css end ---------------- */
-/* ---------------- custom css start ---------------- */
-
-
-/* ---------------- custom css end ---------------- */
